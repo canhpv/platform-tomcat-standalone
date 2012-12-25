@@ -9,7 +9,7 @@
   </parent>
   <groupId>org.exoplatform.platform.pkg</groupId>
   <artifactId>platform-tomcat-standalone</artifactId>
-  <version>4.0.0.Alpha1-SNAPSHOT</version>
+  <version>4.0.0.Alpha1-pkg-unified-search-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>eXo Platform Tomcat Standalone Package</name>
   <scm>
@@ -43,6 +43,8 @@
     <!-- Additional LOGBACK dependencies -->
     <org.codehaus.janino.version>2.6.1</org.codehaus.janino.version>
     <org.fusesource.jansi.version>1.9</org.fusesource.jansi.version>
+    <org.codehaus.jackson.version>1.9.7</org.codehaus.jackson.version>
+    <org.exoplatform.commons.version>4.0.0.Alpha1-com-unified-search-SNAPSHOT</org.exoplatform.commons.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -173,6 +175,40 @@
       <artifactId>commons-webui-resources</artifactId>
       <type>pom</type>
     </dependency>
+    <dependency>
+      <groupId>org.exoplatform.commons</groupId>
+      <artifactId>commons-api</artifactId>
+      <type>pom</type>
+      <version>${org.exoplatform.commons.version}</version>
+    </dependency>    
+    <dependency>
+      <groupId>org.exoplatform.commons</groupId>
+      <artifactId>commons-component-search-service</artifactId>
+      <type>pom</type>
+      <version>${org.exoplatform.commons.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.exoplatform.commons</groupId>
+      <artifactId>commons-component-search-portlet</artifactId>
+      <type>war</type>
+      <version>${org.exoplatform.commons.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.exoplatform.commons</groupId>
+      <artifactId>commons-component-search-portlet</artifactId>
+      <type>pom</type>
+      <version>${org.exoplatform.commons.version}</version>
+    </dependency>
+	<dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-core-asl</artifactId>
+        <version>${org.codehaus.jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>${org.codehaus.jackson.version}</version>
+      </dependency>
     <dependency>
       <groupId>org.exoplatform.ecms</groupId>
       <artifactId>ecms-apps-gadget-publication</artifactId>
